@@ -1,0 +1,32 @@
+@mixin btn {
+    padding: 13px 20px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to top, #7bbce6, #609cc5, #467da5, #2b5f85, #0b4367);
+    color: $textColor;
+}
+
+.title {
+    color: #000;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.title__icon-wrap {
+    text-align: center;
+}
+
+.title-icon {
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #000;
+    display: inline-block;
+    padding: 5px 15px;
+}
+
+.subtitle {
+    font-size: 17px;
+    color: #222222;
+}

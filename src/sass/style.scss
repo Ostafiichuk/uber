@@ -1,0 +1,286 @@
+@import 'vars';
+@import 'elements';
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto' sans-serif;
+    box-sizing: border-box;
+    
+}
+
+.header {
+    min-height: 100vh;
+    background-color: #444444;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $textColor;  
+
+}
+
+.nav {
+    height: 50px;
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+
+    &__list {
+        padding: 0 70px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #dfdfdf;
+        font-size: 15px;
+    }
+}
+
+.subheader {
+    height: 85px;
+    background-color: rgba(0,0,0,.5);
+
+    &__logo {
+        display: block;
+        margin-top: 15px;
+        & img {
+            max-width: 100%;
+        }
+    }
+
+    &__call {
+        font-size: 14px;
+        margin: 15px 0 0 0;
+    }
+
+    &__phone  {
+        color: $textColor;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    &__button {
+        @include btn;
+        margin-top: 15px;
+    }
+}
+
+
+.promo {
+    padding: 67px 0 140px 0;
+    text-align: center;
+
+    &__header {
+        font-weight: 700;
+        font-size: 60px;    
+    }
+
+    &__subheader {
+        font-weight: 600;
+        font-size: 36px;
+    }
+
+    &__desc {
+        margin-top: 40px;
+        font-size: 16px;
+        padding: 0 150px;
+    }
+
+    &__button {
+        @include btn;
+        display: inline-block;
+
+        &__wrap {
+            margin-top: 60px;
+        }
+    }
+}
+
+.advantages {
+    color: #202020;
+    text-align: center;
+    padding: 70px 0;
+
+    &__title {
+        margin-top: 40px;
+    }
+}
+
+.advantagesElement {
+    position: relative;
+    padding: 0 40px 0 170px;
+    text-align: justify;
+    margin-top: 15px;
+
+    &__circle {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 5px;
+        width: 115px;
+        height: 115px;
+        border-radius: 50%;
+        background-color: $secondColor;
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__title {
+        color: $secondColor;
+        font-weight: 500;
+        margin-bottom: 0;
+        font-size: 17px;
+    }
+}
+
+.chance {
+    padding: 50px 0 80px 0;
+    background-image: url(../img/bg2.jpg);
+    text-align: center;
+
+    &__title {
+        margin-top: 40px;
+    }
+
+    &__subtitle {
+        margin-top: 20px;
+    }
+    
+
+    &__element {
+        position: relative;
+        height: 320px;
+        width: 320px;
+        margin-top: 20px;
+        padding: 0 30px;
+        
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.7);
+            z-index: 1; 
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            
+        }
+
+        &__title {
+            position: relative;
+            z-index: 2;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 24px;
+            padding-top: 90px;
+        }
+
+        &__plus {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 35px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #000;
+            z-index: 3;
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 14px;
+                height: 2px;
+                background-color: $secondColor;
+            }
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 2px;
+                height: 14px;
+                background-color: $secondColor;
+            }
+        }
+    }
+}
+
+// section select
+
+.select {
+    position: relative;
+    text-align: center;
+    color: $textColor;
+
+    &_dark {
+        height: 500px;
+        padding-top: 57px;
+        background-color: #070716;
+    }
+
+    &_title-icon {
+        background-color: #fff;
+        color: #000;
+    }
+
+    &__title {
+        margin-top: 35px;
+        color: $textColor;
+    }
+
+    &__subtitle {
+        color: $textColor;
+    }
+
+    .car_wrapper{
+        position: absolute;
+        max-width: 760px;
+        max-height: 480px;
+        left: 50%;
+        top: 233px;
+        transform: translateX(-50%);
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &_white {
+        background: url(../img/bg2.jpg);
+        height: 400px;
+        padding-bottom: 135px;
+        color: #000;
+        padding-top: 215px;
+        font-size: 17px;
+    }
+
+}
+
+// section require
+
+.require {
+    padding: 70px 0 90px 0;
+    text-align: center;
+}
